@@ -10,10 +10,6 @@ cd ..
 make BOARD=1BITSY
 ```
 
-Note: The MicroPython source code needs a one line change in order to build.
-See: https://github.com/micropython/micropython/pull/2654/commits/e1e1891fcdc057dcd9150df477cd41e38cf22469
-(Note: Once that PR lands, I'l remove this notice from this file).
-
 The get the device in DFU mode, you can short the "BOOT DFU" pads on the back
 of the board while plugging it to USB.
 
