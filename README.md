@@ -1,6 +1,7 @@
 These are MicroPython board defintion files for the 1BitSy from 1BitSquared.
 
-The product page can be found here: https://1bitsquared.com/products/1bitsy
+The product page can be found [here](https://1bitsquared.com/products/1bitsy) and
+[here](http://1bitsy.org).
 
 Build the firmware using:
 ```
@@ -11,7 +12,9 @@ make BOARD=1BITSY
 ```
 
 The get the device in DFU mode, you can short the "BOOT DFU" pads on the back
-of the board while plugging it to USB.
+of the board while plugging it to USB. If the sample image is still included on
+the 1BitSy, the you can also enter DFU mode by pressing the pushbutton while
+plugging it into USB.
 
 Once in DFU mode, you should be able to use the ```dfu-util --list``` command and see
 something like this:
@@ -36,3 +39,6 @@ Now you can flash MicroPython using:
 ```
 make BOARD=1BITSY deploy
 ```
+
+You can also flash micropython using gdb by using a BlackMagic Probe and following
+the tutorial [here](http://1bitsy.org/overview/quickstart/).
