@@ -5,7 +5,7 @@ The product page can be found [here](https://1bitsquared.com/products/1bitsy) an
 
 Build the firmware using:
 ```
-cd micropython/stmhal/boards
+cd micropython/ports/stm32/boards
 git clone https://github.com/dhylands/1BITSY.git
 cd ..
 make BOARD=1BITSY
