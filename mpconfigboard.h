@@ -13,7 +13,6 @@
 #define MICROPY_HW_ENABLE_TIMER     (1)
 #define MICROPY_HW_ENABLE_SERVO     (1)
 #define MICROPY_HW_ENABLE_DAC       (1)
-#define MICROPY_HW_ENABLE_CAN       (1)
 #define MICROPY_HW_ENABLE_USB       (1)
 
 // HSE is 25MHz
@@ -72,8 +71,10 @@
 #define MICROPY_HW_SPI2_MOSI (pin_B15) // Y8
 
 // CAN busses
-#define MICROPY_HW_CAN1_NAME "YA" // CAN1 on RX,TX = Y3,Y4 = PB8,PB9
-#define MICROPY_HW_CAN2_NAME "YB" // CAN2 on RX,TX = Y5,Y6 = PB12,PB13
+#define MICROPY_HW_CAN1_TX   (pin_A11)
+#define MICROPY_HW_CAN1_RX   (pin_A12)
+#define MICROPY_HW_CAN2_TX   (pin_B13)
+#define MICROPY_HW_CAN2_RX   (pin_B12)
 
 // USRSW has no pullup or pulldown, and pressing the switch makes the input go low
 #define MICROPY_HW_USRSW_PIN        (pin_C1)
