@@ -28,29 +28,26 @@
 #define MICROPY_HW_RTC_USE_CALOUT   (1)
 
 // UART config
-#define MICROPY_HW_UART1_PORT (GPIOB)
-#define MICROPY_HW_UART1_PINS (GPIO_PIN_6 | GPIO_PIN_7)
+#define MICROPY_HW_UART1_TX     (pin_B6)
+#define MICROPY_HW_UART1_RX     (pin_B7)
+#define MICROPY_HW_UART2_TX     (pin_A2)
+#define MICROPY_HW_UART2_RX     (pin_A3)
+#define MICROPY_HW_UART2_RTS    (pin_A1)
+#define MICROPY_HW_UART2_CTS    (pin_A0)
+#define MICROPY_HW_UART3_TX     (pin_B10)
+#define MICROPY_HW_UART3_RX     (pin_B11)
+#define MICROPY_HW_UART3_RTS    (pin_B14)
+#define MICROPY_HW_UART3_CTS    (pin_B13)
+#define MICROPY_HW_UART4_TX     (pin_A0)
+#define MICROPY_HW_UART4_RX     (pin_A1)
+#define MICROPY_HW_UART5_TX     (pin_C12)
+#define MICROPY_HW_UART5_RX     (pin_D2)
+#define MICROPY_HW_UART6_TX     (pin_C6)
+#define MICROPY_HW_UART6_RX     (pin_C7)
 
-#define MICROPY_HW_UART2_PORT (GPIOA)
-#define MICROPY_HW_UART2_PINS (GPIO_PIN_2 | GPIO_PIN_3)
-#define MICROPY_HW_UART2_RTS  (GPIO_PIN_1)
-#define MICROPY_HW_UART2_CTS  (GPIO_PIN_0)
-
-#define MICROPY_HW_UART3_PORT (GPIOB)
-#define MICROPY_HW_UART3_PINS (GPIO_PIN_10 | GPIO_PIN_11)
-#define MICROPY_HW_UART3_RTS  (GPIO_PIN_14)
-#define MICROPY_HW_UART3_CTS  (GPIO_PIN_13)
-
-#define MICROPY_HW_UART4_PORT (GPIOA)
-#define MICROPY_HW_UART4_PINS (GPIO_PIN_0 | GPIO_PIN_1)
-
-#define MICROPY_HW_UART5_TX_PORT (GPIOC)
-#define MICROPY_HW_UART5_TX_PIN  (GPIO_PIN_12)
-#define MICROPY_HW_UART5_RX_PORT (GPIOD)
-#define MICROPY_HW_UART5_RX_PIN  (GPIO_PIN_2)
-
-#define MICROPY_HW_UART6_PORT (GPIOC)
-#define MICROPY_HW_UART6_PINS (GPIO_PIN_6 | GPIO_PIN_7)
+// Optional, enable REPL on UART 2
+// #define MICROPY_HW_UART_REPL (PYB_UART_2)
+// #define MICROPY_HW_UART_REPL_BAUD   (115200)
 
 // I2C busses
 #define MICROPY_HW_I2C1_SCL (pin_B6)
@@ -82,12 +79,11 @@
 #define MICROPY_HW_USRSW_EXTI_MODE  (GPIO_MODE_IT_FALLING)
 #define MICROPY_HW_USRSW_PRESSED    (0)
 
-// The pyboard has 4 LEDs
+// The 1Bitsy has 1 LED
 #define MICROPY_HW_LED1             (pin_A8)
 #define MICROPY_HW_LED1_PWM         { TIM1, 1, TIM_CHANNEL_1, GPIO_AF1_TIM1 }
 #define MICROPY_HW_LED_ON(pin)      (mp_hal_pin_low(pin))
 #define MICROPY_HW_LED_OFF(pin)     (mp_hal_pin_high(pin))
-
 
 // USB config
 #define MICROPY_HW_USB_FS                 (1)
